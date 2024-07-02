@@ -12,12 +12,22 @@
 
     const object = {
       message: 'hello',
-    } ;
+    };
     
     //objects are refernces & objects can copied by refernce;
     const object1 = object;
     object1.message = 'good job';
+    console.log(object);
     console.log(object1);
+
+
+    const object2 = {
+      message: 'good job'
+    }
+
+    console.log(object2 === object1); // but here we created & compared;
+    console.log(object1 === object); //refernce object;
+    //though they r having same value but it is not same;
 
   </script>
 </body>
