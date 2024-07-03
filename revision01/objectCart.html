@@ -17,6 +17,25 @@
 
   product['delivery-time'] = '3days';
   console.log(product);
+
+  let product1 = {
+      name: 'volley ball',
+      price: 1224
+    }
+    let product2 = {
+      name: 'basket ball',
+      price: 2025
+    }
+  function compareProducts(product1,product2){
+
+    if(product1.price < product2.price){
+      return product1;
+    }else{
+      return product2;
+    }
+  }
+
+  console.log(compareProducts(product1,product2))
   </script>
 </body>
 </html>
