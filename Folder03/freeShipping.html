@@ -10,7 +10,7 @@
   <p>Orders under $40 = +$10</p>
   <p>Orders overs $40 = Free shipping</p>
   <input type="text" placeholder="text" id="input" onkeydown="
-  handleCalculationDown()
+  handleCalculationDown(event);
   "/>
   <button onclick="
   calculateTotal()
@@ -19,8 +19,8 @@
 
   <script>
 
-    function handleCalculationDown(){
-      console.log(event.key)
+    function handleCalculationDown(event){
+      //console.log(event.key)
       event.key === 'Enter' ? calculateTotal() : null;
     }
     function calculateTotal(){
