@@ -9,7 +9,9 @@
   <p>Amazon Shipping Calculator</p>
   <p>Orders under $40 = +$10</p>
   <p>Orders overs $40 = Free shipping</p>
-  <input type="text" placeholder="text" id="input"/>
+  <input type="text" placeholder="text" id="input" onkeydown="console.log(event.key)
+  event.key === 'Enter' ? calculateTotal() : null;
+  "/>
   <button onclick="
   calculateTotal()
   ">Calculate</button>
@@ -21,9 +23,11 @@
      let cost = Number(inputElement.value);
      //console.log(cost)
 
-     if(cost < 40){
-      cost += 10;
-     }
+    //  if(cost < 40){
+    //   cost += 10;
+    //  }
+     cost < 40 ? cost += 10 : null; 
+     
      document.getElementById('total-cost-display').innerHTML = `${cost}`;
     }
   </script>
