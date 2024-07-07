@@ -1,36 +1,45 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
-</head>
-<body>
-  <input type="text" placeholder="your value" id="input-value" onkeydown="calculateTotal(event)"/>
+<html>
+  <head>
+    <title>DOM Projects</title>
+  </head>
+  <body>
+    <!-- Answer is at the bottom. -->
+    <p>Amazon Shipping Calculator</p>
+    <input placeholder="Cost of order" class="js-cost-input" onkeydown="
+      handleCostKeydown(event);
+    ">
+    <button onclick="
+      calculateTotal();
+    ">Calculate</button>
+    <p class="js-total-cost"></p>
 
-  <button onclick="
-  actualCost()
-  ">calculate</button>
-  
-  <p id="show-output"></p>
-  <script>
-
-    function calculateTotal(event){
-      if(event.key === 'Enter'){
-        actualCost()
+    <script>
+      function handleCostKeydown(event) {
+        if (event.key === 'Enter') {
+          calculateTotal();
+        }
       }
-    }
 
-    function actualCost(){
-      let enteredValue = document.getElementById('input-value');
+      /*
+       * Issue = the calculation is inaccurate.
+       * Fix = calculate the number in cents and then
+       *       convert back to dollars at the end.
+       */
+      function calculateTotal() {
+        const inputElement = document.querySelector('.js-cost-input');
 
-      let calculatedValue = Number(enteredValue.value)*100;
+        // Convert the numbers to cents by * 100.
+        let cost = Number(inputElement.value) * 100;
 
-      if(calculateTotal < 4000){
-        calculatedValue = calculatedValue+1000;
-      } 
-      document.getElementById('show-output').innerHTML = `Your Calculated value is: $${(calculatedValue/100)}`
-    }
-  </script>
-</body>
+        if (cost < 4000) {
+          cost = cost + 1000;
+        }
+
+        // Convert back to dollars at the end.
+        document.querySelector('.js-total-cost')
+          .innerHTML = `$${cost / 100}`;
+      }
+    </script>
+  </body>
 </html>
