@@ -7,9 +7,11 @@
 </head>
 <body>
   <input type="text" placeholder="your value" id="input-value" onkeydown="calculateTotal(event)"/>
+
   <button onclick="
   actualCost()
   ">calculate</button>
+  
   <p id="show-output"></p>
   <script>
 
@@ -21,10 +23,13 @@
 
     function actualCost(){
       let enteredValue = document.getElementById('input-value');
-      let calculatedValue = Number(enteredValue.value);
 
-      calculatedValue += 10; 
-      document.getElementById('show-output').innerHTML = `Your Calculated value is: $${calculatedValue}`
+      let calculatedValue = Number(enteredValue.value)*100;
+
+      if(calculateTotal < 4000){
+        calculatedValue = calculatedValue+1000;
+      } 
+      document.getElementById('show-output').innerHTML = `Your Calculated value is: $${(calculatedValue/100)}`
     }
   </script>
 </body>
