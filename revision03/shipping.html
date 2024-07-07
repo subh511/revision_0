@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <input type="text" placeholder="your value" id="input-value" onkeydown="calculateTotal(event)"/>
+  <button onclick="
+  actualCost()
+  ">calculate</button>
+  <p id="show-output"></p>
+  <script>
+
+    function calculateTotal(event){
+      if(event.key === 'Enter'){
+        actualCost()
+      }
+    }
+
+    function actualCost(){
+      let enteredValue = document.getElementById('input-value');
+      let calculatedValue = Number(enteredValue.value);
+
+      calculatedValue += 10; 
+      document.getElementById('show-output').innerHTML = `Your Calculated value is: $${calculatedValue}`
+    }
+  </script>
+</body>
+</html>
