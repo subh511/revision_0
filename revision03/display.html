@@ -6,9 +6,16 @@
   <title>Document</title>
 </head>
 <body>
-  <input text="text" placeholder="text" id="apna-text"/>
+  <input text="text" placeholder="text" id="apna-text" onkeyup="showText()"/>
+  
   <p id="display"></p>
+
   <script>
+
+    function showText(){
+     let typedValue = document.getElementById('apna-text').value;
+     let showResult = document.getElementById('display').innerHTML = `${typedValue}`
+    }
 
   </script>
 </body>
