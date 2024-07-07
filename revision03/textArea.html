@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <input type="text" placeholder="name" id="input" onkeydown="
+  if(event.key === 'Enter'){
+    let actualInput = document.getElementById('input')
+    document.getElementById('show-output').innerHTML = `Your name is: ${actualInput.value}`
+  }
+    "/>
+
+  <button id="submit-btn" onclick="
+  let actualInput = document.getElementById('input')
+  document.getElementById('show-output').innerHTML = `Your name is: ${actualInput.value}`
+  ">Submit</button>
+  <p id="show-output"></p>
+  <script>
+  </script>
+</body>
+</html>
