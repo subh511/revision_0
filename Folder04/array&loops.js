@@ -10,23 +10,11 @@ function addTodo() {
   texted.value = "";
 }
 
+//---------array2--------
+
 let arr2 = [];
 
 //renderTodoList()
-
-function renderTodoList() {
-  let todoListHTML = "";
-
-  for (let i = 0; i < arr2.length; i++) {
-    const todo = arr2[i];
-    const html = `<p>${todo}</p>`;
-    todoListHTML += html;
-  }
-
-  console.log(todoListHTML);
-
-  document.getElementById("parent-div").innerHTML = todoListHTML;
-}
 
 function addTodo2(){
 
@@ -39,4 +27,18 @@ function addTodo2(){
   texted.value = "";
 
   renderTodoList()
+}
+
+function renderTodoList() {
+  let todoListHTML = "";
+
+  for (let i = 0; i < arr2.length; i++) {
+    const todo = arr2[i];
+    const html = `<p>${todo}</p>`;
+    todoListHTML += html;
+  }
+
+  //console.log(todoListHTML);
+
+  document.getElementById("parent-div").innerHTML = todoListHTML;
 }
