@@ -21,7 +21,9 @@ for(let i=0; i<arr2.length; i++){
   todoListHTML += html;
 }
 
-console.log(todoListHTML)
+ console.log(todoListHTML)
+
+document.getElementById('parent-div').innerHTML = `${todoListHTML}`
 
 // function addTodo2(){
 //   let text = document.getElementById('text2');
