@@ -1,42 +1,42 @@
 let arr = [];
 
-function addTodo(){
+function addTodo() {
+  let texted = document.getElementById("text1");
 
-let texted = document.getElementById('text1');
+  let extractedValue = texted.value;
+  arr.push(extractedValue);
+  console.log(arr);
 
-let extractedValue = texted.value;
-arr.push(extractedValue)
-console.log(arr);
-
-texted.value = '';
+  texted.value = "";
 }
 
-let arr2 = ['make Dinner', 'wash Dishes'];
+let arr2 = [];
 
-let todoListHTML = '';
+//renderTodoList()
 
-for(let i=0; i<arr2.length; i++){
-  const todo = arr2[i];
-  const html = `<p>${todo}</p>`;
-  todoListHTML += html;
+function renderTodoList() {
+  let todoListHTML = "";
+
+  for (let i = 0; i < arr2.length; i++) {
+    const todo = arr2[i];
+    const html = `<p>${todo}</p>`;
+    todoListHTML += html;
+  }
+
+  console.log(todoListHTML);
+
+  document.getElementById("parent-div").innerHTML = todoListHTML;
 }
 
- console.log(todoListHTML)
+function addTodo2(){
 
-document.getElementById('parent-div').innerHTML = `${todoListHTML}`
+  let texted = document.getElementById("text2");
 
-// function addTodo2(){
-//   let text = document.getElementById('text2');
-//   let addList = text.value;
+  let extractedValue = texted.value;
+  arr2.push(extractedValue);
+  console.log(arr2);
 
-//   arr2.push(addList);
+  texted.value = "";
 
-//   // let displayResult = document.getElementById('displayText').innerHTML = `${arr2.push(textValue.value)}`;
-//   // console.log(arr2);
-//   // console.log(displayResult)
-//   console.log(arr2)
-
-//   text.value = '';
-
-
-// }
+  renderTodoList()
+}
