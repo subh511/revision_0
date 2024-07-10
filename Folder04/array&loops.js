@@ -11,20 +11,30 @@ console.log(arr);
 texted.value = '';
 }
 
-let arr2 = []
+let arr2 = ['make Dinner', 'wash Dishes'];
 
-function addTodo2(){
-  let text = document.getElementById('text2');
-  let addList = text.value;
+let todoListHTML = '';
 
-  arr2.push(addList);
-
-  // let displayResult = document.getElementById('displayText').innerHTML = `${arr2.push(textValue.value)}`;
-  // console.log(arr2);
-  // console.log(displayResult)
-  console.log(arr2)
-
-  text.value = '';
-
-
+for(let i=0; i<arr2.length; i++){
+  const todo = arr2[i];
+  const html = `<p>${todo}</p>`;
+  todoListHTML += html;
 }
+
+console.log(todoListHTML)
+
+// function addTodo2(){
+//   let text = document.getElementById('text2');
+//   let addList = text.value;
+
+//   arr2.push(addList);
+
+//   // let displayResult = document.getElementById('displayText').innerHTML = `${arr2.push(textValue.value)}`;
+//   // console.log(arr2);
+//   // console.log(displayResult)
+//   console.log(arr2)
+
+//   text.value = '';
+
+
+// }
