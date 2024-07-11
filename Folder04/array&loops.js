@@ -12,6 +12,10 @@ function addTodo() {
 
 //---------array2--------
 
+//1.save the data;
+//2.generate the html;
+//3.make it interactive;
+
 let arr2 = [];
 
 //renderTodoList()
