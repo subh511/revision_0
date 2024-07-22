@@ -24,6 +24,18 @@
       }
     }
     object1.fun()
+
+    function display(param){
+      console.log(param)
+    }
+    display(2)
+
+    function run(param1){
+      param1()
+    }
+    run(function(){
+      console.log('hello4')
+    });
   </script>
 </body>
 </html>
