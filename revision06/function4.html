@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <button onclick="addToCartButton()">Add to cart</button>
+  <p id="display"></p>
+  <script>
+    function addToCartButton(){
+      let timeOut;
+
+      let button = document.getElementById('display');
+      button.innerHTML = 'Added!';
+
+      clearTimeout(timeOut);
+
+      timeOut = setTimeout(()=>{
+        button.innerHTML = ''
+      },2000);
+    }
+  </script>
+</body>
+</html>
