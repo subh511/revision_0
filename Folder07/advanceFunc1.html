@@ -6,22 +6,23 @@
   <title>Document</title>
 </head>
 <body>
-  <button onclick="" id="btn">Click</button>
+  <button id="btn">Click</button>
 
   <script>
     let buttonElement = document.getElementById('btn');
 
     const clickFunction = ()=>{
-      console.log('clicked!');
+      console.log('click1');
     }
+    //addingListeners;
     buttonElement.addEventListener('click',clickFunction);
 
     //remove listener;
-
     buttonElement.removeEventListener('click',clickFunction);
 
+
     buttonElement.addEventListener('click',()=>{
-      console.log('awesome');
+      console.log('click2');
     });
   </script>
 </body>
