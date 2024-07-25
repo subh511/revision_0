@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <button id="btn">Add to cart</button>
+    <p id="displayText"></p>
+    <script>
+      let timeOut;
+      let isText = false;
+      function clicked() {
+        let button = document.getElementById("displayText");
+        if (isText) {
+          clearTimeout(timeOut)
+          timeOut = setTimeout(() => {
+            button.innerHTML = '';
+          }, 2500);
+          isText = false;
+        } else {
+          clearTimeout(timeOut)
+          timeout = setTimeout(() => {
+            button.innerHTML = "Added!";
+          }, 1500);
+          isText = true;
+        }
+      }
+      let clickedButton = document.getElementById("btn");
+      clickedButton.addEventListener("click", clicked);
+    </script>
+  </body>
+</html>
