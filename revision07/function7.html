@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <button id="btn">Add to cart</button>
+  <p id="displayText"></p>
+  <script>
+
+    let displayed = document.getElementById('displayText')
+    
+    function displayResult(){
+    setTimeout(()=>{
+      displayed.innerHTML = 'Added to Cart!'
+    },2000)
+  }
+  let clickedButton = document.getElementById('btn');
+
+  clickedButton.addEventListener('click',displayResult)
+
+  </script>
+</body>
+</html>
