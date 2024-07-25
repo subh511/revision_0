@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <button onclick="" id="btn">Click</button>
+
+  <script>
+    let buttonElement = document.getElementById('btn');
+
+    const clickFunction = ()=>{
+      console.log('clicked!');
+    }
+    buttonElement.addEventListener('click',clickFunction);
+
+    //remove listener;
+
+    buttonElement.removeEventListener('click',clickFunction);
+
+    buttonElement.addEventListener('click',()=>{
+      console.log('awesome');
+    });
+  </script>
+</body>
+</html>
